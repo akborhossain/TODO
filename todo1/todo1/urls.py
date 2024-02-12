@@ -20,5 +20,6 @@ urlpatterns = [
     path('auth/',include('rest_framework.urls',namespace='rest_framework')),
     path('',include(router.urls)),
     path('userlogin/',views.UserLoginApi.as_view()),
+    path('register/',views.UserRegistration.as_view()),
 ]
 urlpatterns += router.urls
