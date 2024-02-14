@@ -106,12 +106,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#globaly filter apply
+
 REST_FRAMEWORK={
-    'DEFAULT_FILTER_BACKENDS':['django_filters.rest_framework.DjangoFilterBackend']
+    #globaly filter apply
+    'DEFAULT_FILTER_BACKENDS':['django_filters.rest_framework.DjangoFilterBackend'],
+    #filter end 
+    
+    #global page management start
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE':5
+    #pagination end
 }
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
