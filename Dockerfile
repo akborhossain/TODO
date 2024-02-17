@@ -8,4 +8,4 @@ RUN pip install -r requirement.txt
 
 CMD [ "python" ,"manage.py" , "runserver"]
 
-EXPOSE 5000
+EXPOSE 80
